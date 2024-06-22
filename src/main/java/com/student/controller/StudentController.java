@@ -37,14 +37,24 @@ public class StudentController {
 	public StudentDto getUserByName(@RequestParam String name) {
 		return studentservice.getUserByName(name);
 	}
+	
+	
+	
 	@GetMapping("/getall")
 	public List<StudentDto> getAll(){
 		return studentservice.getAll();
 		
 	}
+	
+	
+	
 	@PutMapping("/update/{id}")
 	public StudentDto updateById(@RequestBody StudentDto dto,@PathVariable Integer id) {
 		return studentservice.updateById(dto,id);
+		
+		
+		
+		
 		
 	}
 	@DeleteMapping("/delete/{id}")
